@@ -1,4 +1,5 @@
-﻿void StampaArrayInteri(int[] array)
+﻿//--- Funzioni ---
+void StampaArrayInteri(int[] array)
 {
     int ultimoIndiceArray = array.Length - 1;
     Console.Write("[");
@@ -48,25 +49,29 @@ int SommaElementiArray(int[] array)
     return sum;
 }
 
+//Esercizio
+
 int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+Console.Write("Valori array: ");
 StampaArrayInteri(arrayNumeri);
 
 int nuovoNumero = Quadrato(10);
-Console.WriteLine(nuovoNumero);
+Console.WriteLine("Numero elevato al quadrato: " + nuovoNumero);
 
 int[] nuovoArrayNumeriQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
+Console.Write("Valori array al quadrato: ");
 StampaArrayInteri(nuovoArrayNumeriQuadrato);
 
+Console.Write("Valori array iniziale, dopo modifica al quadrato: ");
 StampaArrayInteri(arrayNumeri);
 
 int nuovoArrayNumeriSommati = SommaElementiArray(arrayNumeri);
-Console.WriteLine(nuovoArrayNumeriSommati);
+Console.WriteLine("Numeri array sommati: " + nuovoArrayNumeriSommati);
 
 int nuovoArrayNumeriSommatiQuadrato = SommaElementiArray(nuovoArrayNumeriQuadrato);
-Console.WriteLine(nuovoArrayNumeriSommatiQuadrato);
+Console.WriteLine("Numeri array al quadrato sommati: " + nuovoArrayNumeriSommatiQuadrato);
 
 
 
 
-//Console.WriteLine(nuovoArrayNumeriSommati);
-//int sum = nuovoArrayNumeriSommati.Sum();
+
