@@ -22,9 +22,25 @@ int Quadrato(int numero)
     return risultato;
 }
 
+int[] ElevaArrayAlQuadrato(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone();
+    int i = 0;
+
+    for (i = 0; i < copiaArray.Length; i++)
+    {
+        copiaArray[i] = Quadrato(copiaArray[i]);
+    }
+
+    return copiaArray;
+}
+
 int[] nuovoArrayNumeri = { 2, 6, 7, 5, 3, 9 };
 StampaArrayInteri(nuovoArrayNumeri);
 
 int nuovoNumero = Quadrato(10);
 Console.WriteLine(nuovoNumero);
+
+int[] nuovoNumero2 = ElevaArrayAlQuadrato(nuovoArrayNumeri);
+StampaArrayInteri(nuovoNumero2);
 
