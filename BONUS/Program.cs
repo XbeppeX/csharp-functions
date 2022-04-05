@@ -48,9 +48,22 @@ int SommaElementiArray(int[] array)
     return sum;
 }
 
+
 //Esercizio
 
-int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+Console.Write("Inserisci lunghezza array desiderata: ");
+int dimensioneArray = Convert.ToInt32(Console.ReadLine());
+
+int[] arrayNumeri = new int[dimensioneArray];
+
+//Ciclo for per chiedere valori elemento
+for (int i = 0; i < arrayNumeri.Length; i++)
+{
+    Console.Write("Inserisci valore elemnto numero {0}: ",i+1);
+    int valoreElemento = Convert.ToInt32(Console.ReadLine());
+    arrayNumeri[i] = valoreElemento;
+}
+
 Console.Write("Valori array: ");
 StampaArrayInteri(arrayNumeri);
 
@@ -72,5 +85,4 @@ Console.WriteLine("Numeri array al quadrato sommati: " + nuovoArrayNumeriSommati
 
 
 
-
-
+//Console.WriteLine(arrayNumeri[i]);
