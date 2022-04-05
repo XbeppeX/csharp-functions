@@ -57,8 +57,13 @@ Console.WriteLine(nuovoNumero);
 int[] nuovoArrayNumeriQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
 StampaArrayInteri(nuovoArrayNumeriQuadrato);
 
+StampaArrayInteri(arrayNumeri);
+
 int nuovoArrayNumeriSommati = SommaElementiArray(arrayNumeri);
 Console.WriteLine(nuovoArrayNumeriSommati);
+
+int nuovoArrayNumeriSommatiQuadrato = SommaElementiArray(nuovoArrayNumeriQuadrato);
+Console.WriteLine(nuovoArrayNumeriSommatiQuadrato);
 
 
 
