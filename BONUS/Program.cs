@@ -48,36 +48,42 @@ int SommaElementiArray(int[] array)
     return sum;
 }
 
+int [] InserimentoValori(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write("Inserisci valore elemnto numero {0}: ", i + 1);
+        int valoreElemento = Convert.ToInt32(Console.ReadLine());
+        array[i] = valoreElemento;
+    }
+
+    return array;
+}
 
 //Esercizio
 
 Console.Write("Inserisci lunghezza array desiderata: ");
 int dimensioneArray = Convert.ToInt32(Console.ReadLine());
 
+//Nuovo array 
 int[] arrayNumeri = new int[dimensioneArray];
+int[] nuovoArrayNumeri = InserimentoValori(arrayNumeri);
 
-//Ciclo for per chiedere valori elemento
-for (int i = 0; i < arrayNumeri.Length; i++)
-{
-    Console.Write("Inserisci valore elemnto numero {0}: ",i+1);
-    int valoreElemento = Convert.ToInt32(Console.ReadLine());
-    arrayNumeri[i] = valoreElemento;
-}
-
+//Stampare funzioni
 Console.Write("Valori array: ");
-StampaArrayInteri(arrayNumeri);
+StampaArrayInteri(nuovoArrayNumeri);
 
 int nuovoNumero = Quadrato(10);
 Console.WriteLine("Numero elevato al quadrato: " + nuovoNumero);
 
-int[] nuovoArrayNumeriQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
+int[] nuovoArrayNumeriQuadrato = ElevaArrayAlQuadrato(nuovoArrayNumeri);
 Console.Write("Valori array al quadrato: ");
 StampaArrayInteri(nuovoArrayNumeriQuadrato);
 
 Console.Write("Valori array iniziale, dopo modifica al quadrato: ");
-StampaArrayInteri(arrayNumeri);
+StampaArrayInteri(nuovoArrayNumeri);
 
-int nuovoArrayNumeriSommati = SommaElementiArray(arrayNumeri);
+int nuovoArrayNumeriSommati = SommaElementiArray(nuovoArrayNumeri);
 Console.WriteLine("Numeri array sommati: " + nuovoArrayNumeriSommati);
 
 int nuovoArrayNumeriSommatiQuadrato = SommaElementiArray(nuovoArrayNumeriQuadrato);
@@ -85,4 +91,3 @@ Console.WriteLine("Numeri array al quadrato sommati: " + nuovoArrayNumeriSommati
 
 
 
-//Console.WriteLine(arrayNumeri[i]);
