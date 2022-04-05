@@ -35,12 +35,33 @@ int[] ElevaArrayAlQuadrato(int[] array)
     return copiaArray;
 }
 
-int[] nuovoArrayNumeri = { 2, 6, 7, 5, 3, 9 };
-StampaArrayInteri(nuovoArrayNumeri);
+int SommaElementiArray(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone();
+    int sum = 0;
+
+    foreach (int item in copiaArray)
+    {
+        sum += item;
+    }
+
+    return sum;
+}
+
+int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+StampaArrayInteri(arrayNumeri);
 
 int nuovoNumero = Quadrato(10);
 Console.WriteLine(nuovoNumero);
 
-int[] nuovoNumero2 = ElevaArrayAlQuadrato(nuovoArrayNumeri);
-StampaArrayInteri(nuovoNumero2);
+int[] nuovoArrayNumeriQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
+StampaArrayInteri(nuovoArrayNumeriQuadrato);
 
+int nuovoArrayNumeriSommati = SommaElementiArray(arrayNumeri);
+Console.WriteLine(nuovoArrayNumeriSommati);
+
+
+
+
+//Console.WriteLine(nuovoArrayNumeriSommati);
+//int sum = nuovoArrayNumeriSommati.Sum();
