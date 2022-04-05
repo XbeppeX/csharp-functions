@@ -16,6 +16,15 @@
     Console.WriteLine("]");
 }
 
+int Quadrato(int numero)
+{
+    int risultato = numero * numero;
+    return risultato;
+}
+
 int[] nuovoArrayNumeri = { 2, 6, 7, 5, 3, 9 };
 StampaArrayInteri(nuovoArrayNumeri);
+
+int nuovoNumero = Quadrato(10);
+Console.WriteLine(nuovoNumero);
 
